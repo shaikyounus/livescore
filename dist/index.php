@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCType>
+
+<html>
+<head>
+
+  <title>Imran Khan</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Caveat&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet"> 
+  
+</head>
+
+<body>
+  <nav id="navbar">
+    <header class="nav-list">Reference Feed</header>
+     <ul>
+      <a class="nav-link" href="#1" rel="internal"><li>Live Score?</li></a>
+       <a class="nav-link" href="#2" rel="internal"><li>How it's looks like?</li></a>
+       
+       <a class="nav-link" href="#3" rel="internal"><li>Main attributes of cricket.</li></a>
+       <a class="nav-link" href="#4" rel="internal"><li>Origins of Cricket.</li></a>
+       <a class="nav-link" href="#5" rel="internal"><li>Current status of Cricket.</li></a>
+       <a class="nav-link" href="../settings.php" rel="internal"><li>Settings</li></a>
+       <a class="nav-link" href="../logout.php" rel="internal"><li>Logout</li></a>
+
+  </nav>
+  <main id="main doc">
+    <section class="main-section" id="1" id="6">
+<header class="text" id="topofpage">Live Score Now</header>
+
+<?php
+
+  $cricketMatchesTxt = file_get_contents('http://cricapi.com/api/cricket/?apikey=e7nbx1IX5SaNHhEmNxbenmQNTFl2');  // change with your API key
+  $cricketMatches = json_decode($cricketMatchesTxt);
+
+    foreach($cricketMatches->data as $item) {
+?>
+  <h4><?php echo($item->title); ?></h4>
+<?php } ?>
+
+    </section>
+<!--
+  <main id="main doc">
+    <section class="main-section" id="1" id="6">
+      <header class="text" id="topofpage">What is cricket?</header>
+      <p>Cricket is a bat-and-ball game played between two teams of eleven players on a field at the centre of which is a 20-metre (22-yard) pitch with a wicket at each end, each comprising two bails balanced on three stumps. The batting side scores runs by striking the ball bowled at the wicket with the bat, while the bowling and fielding side tries to prevent this and dismiss each player (so they are "out"). Means of dismissal include being bowled, when the ball hits the stumps and dislodges the bails, and by the fielding side catching the ball after it is hit by the bat, but before it hits the ground. When ten players have been dismissed, the innings ends and the teams swap roles. The game is adjudicated by two umpires, aided by a third umpire and match referee in international matches. They communicate with two off-field scorers who record the match's statistical information. </P>
+    
+    </section>
+-->
+    <section class="main-section" id="2">
+      <header class="text">How it's looks like?</header>
+      <img src="https://spartans.com.au/wp-content/uploads/2017/01/mingenew.jpg" alt="A cricket game.">
+      <p class="img-disc">A Cricket match</P>
+    </section>
+
+    <section class="main-section" id="3">
+      <header class="text">Main attributes of cricket.</header>
+      <p>Cricket consists three main attributes-</P>
+  <ul>
+        <li>Batting</li>
+        <li>Bowling</li>
+       <li>Fielding</li>
+      </ul>
+    </section>
+
+    <section class="main-section" id="4">
+      <header class="text">Origins of Cricket.</header>
+      <p>Cricket is one of many games in the "club ball" sphere that basically involve hitting a ball with a hand-held implement; others include baseball, golf, hockey, tennis, squash, badminton and table tennis.[2] In cricket's case, a key difference is the existence of a solid target structure, the wicket (originally, it is thought, a "wicket gate" through which sheep were herded), that the batsman must defend.[3] The cricket historian Harry Altham identified three "groups" of "club ball" games: the "hockey group", in which the ball is driven to and fro between two targets (the goals); the "golf group", in which the ball is driven towards an undefended target (the hole); and the "cricket group", in which "the ball is aimed at a mark (the wicket) and driven away from it".[4]
+
+It is generally believed that cricket originated as a children's game in the south-eastern counties of England, sometime during the medieval period.[3] Although there are claims for prior dates, the earliest definite reference to cricket being played comes from evidence given at a court case in Guildford on Monday, 17 January 1597 (Julian calendar; equating to 30 January 1598 in the Gregorian calendar). The case concerned ownership of a certain plot of land and the court heard the testimony of a 59-year-old coroner, John Derrick. </P>
+    </section>
+
+    <section class="main-section" id="5">
+      <header class="text">Current status of Cricket.</header>
+      <p>But having argued on invention, test matches are the purest and prime form of this game; any changes to this format just won’t suit the party. I would always want to see innovation on the T-20 front to make the game more interesting and unpredictable; certain allowances towards batsmen being allowed to use switch hit, and similarly; bowlers allowed to change their delivery stance from right arm to left arm at the last minute. Also, as a part of change, it would be great to have ODIs divided into 4 innings as proposed by Sachin Tendulkar and once implemented by cricket Australia. This would generate fair amount of interest in the crowd and a lot of one sided games can be avoided as both teams get sufficient chances to analyse the match situation.
+<br>
+<br>
+Another change I would like to see is T-20 being played in indoor stadiums. Test matches cannot be played indoors as we haven’t graduated to day-night test match yet. But T-20 shall surely make a good match within indoor stadium; a benefit being no rain ruined matches. This formula was successfully tried by Cricket Australia nearly 11 years ago when South Africa toured them for 3 ODIs. At some point in time Television Broadcasters & Sponsors will advocate this concept and not live with the tag of game being subject to natural elements. With evolution of league cricket and so much money being invested; the cricket authorities in partnership with their corporate investors shall realize this misfit sooner than later. Indoor stadiums would ensure matches are played and completed, when they should be.
+        <br>
+        <br>
+
+The concept of miking is good but it being used just for Player interviews, is bit comical. Late South African Skipper Hansi Cronje and late Bob Woolmer tried this concept in 1999 world cup where Hansi was always wired up and shall get inputs from Woolmer at every critical juncture but this move of innovation was banned by ICC. With the advent of T20, miking is the form used to interview on field players and to get match bites from them. To make T-20 more interesting if this concept can be extended between coaches and on field captain; which would make it an absolute hit with cricketers and shall make it worthwhile.
+<br>
+<br>
+These concepts can be cascaded to cricket board approved private leagues. Cricket in future will be about providing a short format that is fast, furious and exciting. While to retain prime form of the game; both Test matches & T-20s shall need to be re-positioned much like our education system where kids get to choose between Science, Commerce or any other field of their choice; young cricketers at certain point in their life with guidance from their coach should also get to pick any format of their choice based on their strengths and weakness. Meanwhile as we fantasize about these changes to the game, administrators need to maintain the perks of equal level for playing all forms of game to avoid discrimination.</P>
+      </section>
+ <section class="main-section">
+   <p>Reference-</p>
+  <p><a class="source" href="https://en.wikipedia.org/wiki/Cricket" target="_blank">Cricket-wikipedia</a> - Retrieved 2019-12-26</p>
+  </section>
+  </main>
+
+<footer class="main-section"><a href="#topofpage">Go to top</a><br><br>&copy; 2020 Written and Coded By: Imran Khan</footer>
+</body>
+</html>
+<!-- partial -->
+  
+</body>
+</html>

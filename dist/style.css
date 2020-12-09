@@ -1,0 +1,58 @@
+body{
+  background:lightblue;
+}
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: lightblue;
+  }
+}
+.nav-list{
+  padding-left: 30px;
+  padding-top: 30px;
+   color:#00006f;
+   font-size:30px;
+  font-family: 'Poppins', sans-serif;
+  
+}
+#navbar {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 323px;
+  height: 100%;
+  border: 1px solid white;
+  overflow-y: scroll;
+}
+.nav-link {
+  padding: 3px;
+  text-decoration: none;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+}
+#navbar li {
+  color: #00006f;
+  border: 1px solid;
+  padding: 7px;
+  list-style: none;
+  position: relative;
+  right: 17px;
+}
+.main-section{
+   padding-left: 350px;
+  color:#00006f;
+  
+}
+.text{
+   font-size:40px;
+  font-family:'Caveat', cursive;
+  
+}
+p{
+  text-align: justify;
+  font-family:'Caveat', cursive;
+    font-size:20px;
+}
+.img-disc{
+   text-align: center;
+  padding-right:250px;
+}
